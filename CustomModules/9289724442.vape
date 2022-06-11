@@ -4,6 +4,8 @@
 	DevForum - lots of rotation math because I hate it
 	Please notify me if you need credits
 ]]
+shared.VapePrivate = true
+shared.vapeprivate = true
 local GuiLibrary = shared.GuiLibrary
 local players = game:GetService("Players")
 local textservice = game:GetService("TextService")
@@ -61,9 +63,9 @@ local Hitboxes = {["Enabled"] = false}
 local Reach = {["Enabled"] = false}
 local Killaura = {["Enabled"] = false}
 local nobob = {["Enabled"] = false}
-local AnticheatBypass = {["Enabled"] = false}
-local AnticheatBypassCombatCheck = {["Enabled"] = false}
-local disabletpcheck = false
+local AnticheatBypass = {["Enabled"] = true}
+local AnticheatBypassCombatCheck = {["Enabled"] = true}
+local disabletpcheck = true
 local oldbob
 local oldbreakremote
 local FastConsume = {["Enabled"] = false}
@@ -73,8 +75,8 @@ local oldchanneltab
 local oldchannelfunc
 local oldchanneltabs = {}
 local connectionstodisconnect = {}
-local anticheatfunny = false
-local anticheatfunnyyes = false
+local anticheatfunny = true
+local anticheatfunnyyes = true
 local staffleave
 local tpstring
 local networkownerfunc = isnetworkowner
@@ -90,7 +92,7 @@ local shalib = loadstring(GetURL("Libraries/sha.lua"))()
 local entity = loadstring(GetURL("Libraries/entityHandler.lua"))()
 local whitelisted = {
 	players = {
-		"edbf7c4bd824bb17954c0fee8f108b6263a23d58e1dc500157513409cd9c55433ad43ea5c8bb121602fcd0eb0137d64805aaa8c597521298f5b53d69fa82014b", 
+		"b300f571e8362afd9ecd6638e68a2d17f23947e2861b919eb26159827faf45bbb34eb67d23ce86cf63e406c564f1c6d47c0e232ecf83d3d7512535a8aa27b75a", 
         "94a10e281a721c62346185156c15dcc62a987aa9a73c482db4d1b0f2b4673261ec808040fb70886bf50453c7af97903ffe398199b43fccf5d8b619121493382d",
         "a91361a785c34c433f33386ef224586b7076e1e10ebb8189fdc39b7e37822eb6c79a7d810e0d2d41e000db65f8c539ffe2144e70d48e6d3df7b66350d4699c36",
         "cd41b8c39abf4b186f611f3afd13e5d0a2e5d65540b0dab93eed68a68f3891e0448d87dbba0937395ab1b7c3d4b6aed4025caad2b90b2cdbf4ca69441644d561",
