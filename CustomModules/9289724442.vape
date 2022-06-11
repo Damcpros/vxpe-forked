@@ -85,7 +85,7 @@ local function GetURL(scripturl)
 	if shared.VapeDeveloper then
 		return readfile("vape/"..scripturl)
 	else
-		return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..scripturl, true)
+		return game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/Damcpros/vxpe-forked/main/", true))()"..scripturl, true)
 	end
 end
 local shalib = loadstring(GetURL("Libraries/sha.lua"))()
@@ -136,7 +136,7 @@ local whitelisted = {
 	}
 }
 pcall(function()
-	whitelisted = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/whitelists/main/whitelist2.json", true))
+	whitelisted = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Damcpros/whitelists/main/whitelist2.json", true))
 end)
 
 local function BindToRenderStep(name, num, func)
