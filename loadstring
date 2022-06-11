@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Damcpros/vxpe-forked/main/NewMainScript.lua?token=GHSAT0AAAAAABUDMZYRYGJ5T3P2F4LK2HMQYVEWOXA", true))()
