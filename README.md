@@ -1,3 +1,3 @@
 # Vape V4
-**When you make a script for 2 years lol.**
+**When you try to crack private**
 _Project I made for some reason idk_
