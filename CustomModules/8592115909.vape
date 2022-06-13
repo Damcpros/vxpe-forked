@@ -37,8 +37,6 @@ if shared.VapeDeveloper then
 		loadstring(readfile("vape/CustomModules/8542275097.vape"))()
 	end
 else
-	local publicrepo = checkpublicrepo("8542275097")
-	if publicrepo then
-		loadstring(publicrepo)()
+	loadstring(readfile("vape/CustomModules/8542275097.vape"))()
 	end
 end
