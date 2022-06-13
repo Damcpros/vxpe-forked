@@ -104,10 +104,10 @@ local shalib = loadstring(GetURL("Libraries/sha.lua"))()
 local entity = loadstring(GetURL("Libraries/entityHandler.lua"))()
 
 local AnticheatBypassNumbers = {
-	TPSpeed = 0.7
-	TPCombat = 1
-	TPLerp = 0.8,
-	TPCheck = 20
+	TPSpeed = 3
+	TPCombat = 2.6
+	TPLerp = 1.8,
+	TPCheck = 70
 }
 
 local function BindToRenderStep(name, num, func)
