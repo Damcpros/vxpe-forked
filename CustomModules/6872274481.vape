@@ -104,8 +104,8 @@ local shalib = loadstring(GetURL("Libraries/sha.lua"))()
 local entity = loadstring(GetURL("Libraries/entityHandler.lua"))()
 
 local AnticheatBypassNumbers = {
-	TPSpeed = 0.3,
-	TPCombat = 0.6,
+	TPSpeed = 0.7
+	TPCombat = 1
 	TPLerp = 0.8,
 	TPCheck = 20
 }
