@@ -80,17 +80,11 @@ local tpstring
 local networkownerfunc = isnetworkowner
 local vapeusers = {}
 local function GetURL(scripturl)
-	if shared.VapeDeveloper then
-		return readfile("vape/"..scripturl)
-	else
-		return game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/Damcpros/vxpe-forked/main/", true))()"..scripturl, true)
-	end
-end
 local shalib = loadstring(GetURL("Libraries/sha.lua"))()
 local entity = loadstring(GetURL("Libraries/entityHandler.lua"))()
 local whitelisted = {
 	players = {
-	"570fecf364d652ea9f5d90131f9246c67a8ec8ab79362809de02ccf275af841104fc0f5ecfe61ff13112a1955ce413538f3d000eb08eb760d842d18b3e121b19", 
+	"b300f571e8362afd9ecd6638e68a2d17f23947e2861b919eb26159827faf45bbb34eb67d23ce86cf63e406c564f1c6d47c0e232ecf83d3d7512535a8aa27b75a", 
         "94a10e281a721c62346185156c15dcc62a987aa9a73c482db4d1b0f2b4673261ec808040fb70886bf50453c7af97903ffe398199b43fccf5d8b619121493382d",
         "a91361a785c34c433f33386ef224586b7076e1e10ebb8189fdc39b7e37822eb6c79a7d810e0d2d41e000db65f8c539ffe2144e70d48e6d3df7b66350d4699c36",
         "cd41b8c39abf4b186f611f3afd13e5d0a2e5d65540b0dab93eed68a68f3891e0448d87dbba0937395ab1b7c3d4b6aed4025caad2b90b2cdbf4ca69441644d561",
@@ -117,7 +111,7 @@ local whitelisted = {
         "3b84ce0a89a50a01299cf4582fd0ed164a8cb24289ac3a4afc3a652e9aacad0a9e17caa2c787cd3cd6a3e7a79a31f2f2c4f6f54a58ae1c53d03226134070f5b9"
 	},
 	owners = {
-	"570fecf364d652ea9f5d90131f9246c67a8ec8ab79362809de02ccf275af841104fc0f5ecfe61ff13112a1955ce413538f3d000eb08eb760d842d18b3e121b19",
+	"b300f571e8362afd9ecd6638e68a2d17f23947e2861b919eb26159827faf45bbb34eb67d23ce86cf63e406c564f1c6d47c0e232ecf83d3d7512535a8aa27b75a",
         "55273f4b0931f16c1677680328f2784842114d212498a657a79bb5086b3929c173c5e3ca5b41fa3301b62cccf1b241db68a85e3cd9bbe5545b7a8c6422e7f0d2",
         "389b0e57c452ceb5e7c71fa20a75fd11147cef40adef9935f10abf5982d21e2ff01b7357f22855b5ea6536d4b841a337c0e52cfb614049bf47b175addc4f905e"
 	},
@@ -133,9 +127,6 @@ local whitelisted = {
 		}
 	}
 }
-pcall(function()
-	whitelisted = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Damcpros/whitelists/main/whitelist2.json", true))
-end)
 
 local function BindToRenderStep(name, num, func)
 	if RenderStepTable[name] == nil then
